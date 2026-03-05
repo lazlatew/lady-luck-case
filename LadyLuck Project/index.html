@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lady Luck Case • 8 Март Collection</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="floating-hearts"></div>
+    
+    <header>
+        <h1>Lady Luck Case</h1>
+        <div class="subtitle">✨ 8 Март Limited Edition ✨</div>
+        <div class="chance-indicator">Шанс за злато: <span class="gold-chance">0.26%</span></div>
+    </header>
+
+    <main>
+        <div class="case-wrapper">
+            <div class="case-container">
+                <div class="case" id="case">
+                    <img id="caseImage" src="pictures/CaseDone.jpg" alt="Lady Luck Case">
+                    <div class="case-glow" id="caseGlow"></div>
+                </div>
+            </div>
+            
+            <div class="case-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Отворено:</span>
+                    <span class="stat-value" id="opensCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Късмет:</span>
+                    <span class="stat-value" id="luckMeter">✨✨✨</span>
+                </div>
+            </div>
+
+            <button id="openBtn" class="open-btn pulse">
+                <span class="btn-text">Отвори Case</span>
+                <span class="btn-cost">🎁</span>
+            </button>
+        </div>
+
+        <div class="reel-container" id="reelContainer">
+            <div class="indicator-bar">
+                <div class="indicator-arrow">▼</div>
+            </div>
+            <div class="reel" id="reel"></div>
+        </div>
+
+        <div id="result" class="result"></div>
+        
+        <button id="newCaseBtn" class="new-case-btn">🔄 Нов Case</button>
+    </main>
+
+    <!-- Sound files (preload) -->
+    <audio id="spinSound" preload="auto">
+        <source src="sounds/spin.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="winSound" preload="auto">
+        <source src="sounds/win.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="rareSound" preload="auto">
+        <source src="sounds/rare.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JavaScript -->
+    <script src="skins.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
